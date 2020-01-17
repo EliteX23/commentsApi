@@ -1,0 +1,4 @@
+C:\Users\Владимир\source\repos\commentsApi\Interfaces\bin\Debug\netstandard2.0\Core.dll
+C:\Users\Владимир\source\repos\commentsApi\Interfaces\obj\Debug\netstandard2.0\Interfaces.csprojAssemblyReference.cache
+C:\Users\Владимир\source\repos\commentsApi\Interfaces\obj\Debug\netstandard2.0\Interfaces.AssemblyInfoInputs.cache
+C:\Users\Владимир\source\repos\commentsApi\Interfaces\obj\Debug\netstandard2.0\Interfaces.AssemblyInfo.cs
