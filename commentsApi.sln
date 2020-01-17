@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "commentsApi", "commentsApi\commentsApi.csproj", "{599FE67B-76DA-4C64-A5F6-9228CC084EDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "commentsApi", "commentsApi\commentsApi.csproj", "{599FE67B-76DA-4C64-A5F6-9228CC084EDD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{A273D2BB-A7BE-4F76-BF36-00BE4F380E88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{75F02AF3-87FB-4DB1-A28B-C138EB2058B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{599FE67B-76DA-4C64-A5F6-9228CC084EDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{599FE67B-76DA-4C64-A5F6-9228CC084EDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{599FE67B-76DA-4C64-A5F6-9228CC084EDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75F02AF3-87FB-4DB1-A28B-C138EB2058B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75F02AF3-87FB-4DB1-A28B-C138EB2058B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75F02AF3-87FB-4DB1-A28B-C138EB2058B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75F02AF3-87FB-4DB1-A28B-C138EB2058B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{75F02AF3-87FB-4DB1-A28B-C138EB2058B2} = {A273D2BB-A7BE-4F76-BF36-00BE4F380E88}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {41964754-65AB-47C5-A82C-0D33817839C1}
