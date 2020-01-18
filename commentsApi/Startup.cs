@@ -2,6 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using commentsApi.MongoConnection;
+using Data;
+using Data.Services;
+using Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,6 +14,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using Services.Interfaces;
 
 namespace commentsApi
 {
@@ -25,6 +31,15 @@ namespace commentsApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            var mongoConectionString = Configuration.GetSection(nameof(CommentDatabaseSettings)).Get<Dictionary<string, string>>();
+            services.AddSingleton<ICommentDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<CommentDatabaseSettings>>().Value)
+                .AddScoped<ICommentRepository, CommentRepository>(serviceProvider =>
+                {
+                    return new CommentRepository(mongoConectionString);
+                })
+                .AddScoped<IComment, CommentService>();
+                
             services.AddControllers();
         }
 
