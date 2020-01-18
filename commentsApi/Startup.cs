@@ -34,6 +34,13 @@ namespace commentsApi
         public void ConfigureServices(IServiceCollection services)
         {
             var mongoConectionString = Configuration.GetSection(nameof(CommentDatabaseSettings)).Get<Dictionary<string, string>>();
+            services.AddSingleton<ITokenRepository, SecurityRepository>(serviceProvider =>
+                 {
+                     return new SecurityRepository(mongoConectionString);
+                 })
+                .AddSingleton<IToken, SecurityService>();
+
+            
             services.AddSingleton<ICommentDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<CommentDatabaseSettings>>().Value)
                 .AddScoped<ICommentRepository, CommentRepository>(serviceProvider =>
@@ -41,33 +48,32 @@ namespace commentsApi
                     return new CommentRepository(mongoConectionString);
                 })
                 .AddScoped<IComment, CommentService>()
-                 .AddSingleton<ITokenRepository, SecurityRepository>(serviceProvider =>
-                 {
-                     return new SecurityRepository(mongoConectionString);
-                 })
-                .AddSingleton<IToken, SecurityService>(); ;
-                
+                 .AddScoped<ICSVService, CSVService>();
+
             services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseMiddleware<TokenMiddleware>();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
+          
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            app.UseMiddleware<TokenMiddleware>();
+           
+           
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
+           
         }
     }
 }

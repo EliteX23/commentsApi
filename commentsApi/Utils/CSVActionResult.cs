@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace commentsApi.Utils
 {
-    public class CSVConverter : FileResult
+    public class CSVActionResult : FileResult
     {
         private string _fileName;
         private byte[] _fileBytes;
 
-        public CSVConverter(string fileName, byte[] fileBytes)
+        public CSVActionResult(string fileName, byte[] fileBytes)
             : base("text/csv")
         {
             _fileName = fileName;

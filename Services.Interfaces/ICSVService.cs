@@ -7,6 +7,6 @@ namespace Services.Interfaces
 {
     public interface ICSVService
     {
-        byte[] ConvertToCSV(IEnumerable<Comment> commentList);
+        string ConvertToCSV(IEnumerable<Comment> commentList);
     }
 }

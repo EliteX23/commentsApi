@@ -16,8 +16,9 @@ namespace commentsApi.middlewares
             _next = next;
             _securityService = securityService;
         }
-        public async Task InvokeAsync(HttpContext context)
+        public async Task Invoke(HttpContext context)
         {
+
             var token = context.Request.Headers["Authorization"];
             var methodType = context.Request.Method;
             if (token.Count == 0)
@@ -31,6 +32,9 @@ namespace commentsApi.middlewares
                 context.Response.StatusCode = 403;
                 await context.Response.WriteAsync("ApiKey is invalid");
             }
+            
+                await _next.Invoke(context);
+           
         }
     }
 }

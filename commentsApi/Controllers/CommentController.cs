@@ -6,6 +6,8 @@ using Core;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Services.Interfaces;
+using commentsApi.Utils;
+using System.Text;
 
 namespace commentsApi.Controllers
 {
@@ -14,9 +16,11 @@ namespace commentsApi.Controllers
     public class CommentController : ControllerBase
     {
         private readonly IComment _commentService;
-        public CommentController(IComment commentService)
+        private readonly ICSVService _csvService;
+        public CommentController(IComment commentService, ICSVService csvService)
         {
             _commentService = commentService;
+            _csvService = csvService;
         }
         [HttpGet]
         //не помешает пагинация
@@ -34,6 +38,15 @@ namespace commentsApi.Controllers
             }
 
             return comment.Result;
+        }
+
+        [HttpGet("export")]
+        public ActionResult<Comment> Export()
+        {
+            var allComments = _commentService.GetList().Result;
+            var csvByteArr = _csvService.ConvertToCSV(allComments);
+                var fileName = $"comments-{DateTime.Now.ToFileTimeUtc()}.csv";
+            return File(Encoding.UTF8.GetBytes(csvByteArr.ToString()), "text/csv", fileName);
         }
 
         [HttpPost]
