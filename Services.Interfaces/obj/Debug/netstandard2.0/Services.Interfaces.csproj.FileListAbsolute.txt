@@ -1,0 +1,11 @@
+C:\Users\Владимир\source\repos\commentsApi\Services.Interfaces\bin\Debug\netstandard2.0\Services.Interfaces.deps.json
+C:\Users\Владимир\source\repos\commentsApi\Services.Interfaces\bin\Debug\netstandard2.0\Services.Interfaces.dll
+C:\Users\Владимир\source\repos\commentsApi\Services.Interfaces\bin\Debug\netstandard2.0\Services.Interfaces.pdb
+C:\Users\Владимир\source\repos\commentsApi\Services.Interfaces\bin\Debug\netstandard2.0\Core.dll
+C:\Users\Владимир\source\repos\commentsApi\Services.Interfaces\bin\Debug\netstandard2.0\Core.pdb
+C:\Users\Владимир\source\repos\commentsApi\Services.Interfaces\obj\Debug\netstandard2.0\Services.Interfaces.csprojAssemblyReference.cache
+C:\Users\Владимир\source\repos\commentsApi\Services.Interfaces\obj\Debug\netstandard2.0\Services.Interfaces.AssemblyInfoInputs.cache
+C:\Users\Владимир\source\repos\commentsApi\Services.Interfaces\obj\Debug\netstandard2.0\Services.Interfaces.AssemblyInfo.cs
+C:\Users\Владимир\source\repos\commentsApi\Services.Interfaces\obj\Debug\netstandard2.0\Services.Interfaces.csproj.CopyComplete
+C:\Users\Владимир\source\repos\commentsApi\Services.Interfaces\obj\Debug\netstandard2.0\Services.Interfaces.dll
+C:\Users\Владимир\source\repos\commentsApi\Services.Interfaces\obj\Debug\netstandard2.0\Services.Interfaces.pdb

@@ -3,3 +3,6 @@ C:\Users\Владимир\source\repos\commentsApi\Core\bin\Debug\netstandard2.0
 C:\Users\Владимир\source\repos\commentsApi\Core\obj\Debug\netstandard2.0\Core.csprojAssemblyReference.cache
 C:\Users\Владимир\source\repos\commentsApi\Core\obj\Debug\netstandard2.0\Core.AssemblyInfoInputs.cache
 C:\Users\Владимир\source\repos\commentsApi\Core\obj\Debug\netstandard2.0\Core.AssemblyInfo.cs
+C:\Users\Владимир\source\repos\commentsApi\Core\bin\Debug\netstandard2.0\Core.pdb
+C:\Users\Владимир\source\repos\commentsApi\Core\obj\Debug\netstandard2.0\Core.dll
+C:\Users\Владимир\source\repos\commentsApi\Core\obj\Debug\netstandard2.0\Core.pdb

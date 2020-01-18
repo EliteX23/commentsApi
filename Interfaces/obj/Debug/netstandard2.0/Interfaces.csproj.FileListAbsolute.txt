@@ -2,3 +2,10 @@ C:\Users\Владимир\source\repos\commentsApi\Interfaces\bin\Debug\netstand
 C:\Users\Владимир\source\repos\commentsApi\Interfaces\obj\Debug\netstandard2.0\Interfaces.csprojAssemblyReference.cache
 C:\Users\Владимир\source\repos\commentsApi\Interfaces\obj\Debug\netstandard2.0\Interfaces.AssemblyInfoInputs.cache
 C:\Users\Владимир\source\repos\commentsApi\Interfaces\obj\Debug\netstandard2.0\Interfaces.AssemblyInfo.cs
+C:\Users\Владимир\source\repos\commentsApi\Interfaces\bin\Debug\netstandard2.0\Interfaces.deps.json
+C:\Users\Владимир\source\repos\commentsApi\Interfaces\bin\Debug\netstandard2.0\Interfaces.dll
+C:\Users\Владимир\source\repos\commentsApi\Interfaces\bin\Debug\netstandard2.0\Interfaces.pdb
+C:\Users\Владимир\source\repos\commentsApi\Interfaces\bin\Debug\netstandard2.0\Core.pdb
+C:\Users\Владимир\source\repos\commentsApi\Interfaces\obj\Debug\netstandard2.0\Interfaces.csproj.CopyComplete
+C:\Users\Владимир\source\repos\commentsApi\Interfaces\obj\Debug\netstandard2.0\Interfaces.dll
+C:\Users\Владимир\source\repos\commentsApi\Interfaces\obj\Debug\netstandard2.0\Interfaces.pdb

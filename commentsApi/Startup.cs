@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using commentsApi.middlewares;
 using commentsApi.MongoConnection;
 using Data;
+using Data.Repositories;
 using Data.Services;
 using Interfaces;
 using Microsoft.AspNetCore.Builder;
@@ -38,7 +40,12 @@ namespace commentsApi
                 {
                     return new CommentRepository(mongoConectionString);
                 })
-                .AddScoped<IComment, CommentService>();
+                .AddScoped<IComment, CommentService>()
+                 .AddSingleton<ITokenRepository, SecurityRepository>(serviceProvider =>
+                 {
+                     return new SecurityRepository(mongoConectionString);
+                 })
+                .AddSingleton<IToken, SecurityService>(); ;
                 
             services.AddControllers();
         }
@@ -54,7 +61,7 @@ namespace commentsApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseMiddleware<TokenMiddleware>();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
